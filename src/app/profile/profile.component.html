@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="profile-header">
+        <div class="profile-pic"></div>
+        <div class="user-info">
+            <p class="user-name" id="p">{{userInfo.firstName}} {{userInfo.lastName}}</p>
+            <p class="user-email">{{userInfo.email}}</p>
+            <button mat-stroked-button class="settings">Settings</button>
+        </div>
+    </div>
+    <h1>{{this.favorites.length}} Favorite(s)</h1>
+    <div class="favs-and-map">
+        <div class="fav-cards">
+            <mat-card [class.mat-elevation-z2]="true" *ngFor="let fav of favorites" class="business-card">
+                <mat-card-content class="card-body" id="card-body-{{fav.business.id}}"> </mat-card-content>
+                <p class="title">{{fav.business.businessName}}</p>
+                <mat-card-footer class="card-footer">
+                    <div class="card-details">
+                        <div><fa-icon [icon]="this.icons.faHeart"></fa-icon><span>20</span></div>
+                        <div><fa-icon [icon]="this.icons.faBuilding"></fa-icon><span>Location</span></div>
+                    </div>
+                    <button mat-mini-fab><mat-icon>keyboard_arrow_right</mat-icon></button>
+                </mat-card-footer>
+            </mat-card>
+        </div>
+        <div  [class.mat-elevation-z4]="true" class="favs-map" id="map"></div>
+    </div>
+</div>

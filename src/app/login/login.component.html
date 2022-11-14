@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="body">
+        <form class="login-form" [formGroup]="loginForm">
+            <h1>Login</h1>
+            <mat-form-field appearance="outline">
+                <input matInput type="text" placeholder="Email" formControlName="email">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <input matInput type="password" placeholder="Password" formControlName="password">
+            </mat-form-field>
+            <p>Don't have an account? <a>Sign Up here!</a></p>
+            <button mat-raised-button (click)="userLogin()">Submit</button>
+        </form>
+        <div [class.mat-elevation-z2]="true" class="promo-poster">
+            <div class="poster">
+                <div class="poster-top">
+                    <button class="left-button" (click)="prevImageClick()"><mat-icon>keyboard_arrow_left</mat-icon></button>
+                    <ng-image-slider class="slider" #nav
+                        [images]="imageObject"
+                        [showArrow]="false"
+                        [infinite]="true"
+                        [autoSlide]="1"
+                        [imageSize]="{width: '50%', height: '25%'}"
+                        slideImage="1"></ng-image-slider>
+                    <button class="right-button" (click)="nextImageClick()"><mat-icon>keyboard_arrow_right</mat-icon></button>
+                </div>
+                <p class="promo-message">
+                    Login to start saving your favorite Black Businesses Today!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

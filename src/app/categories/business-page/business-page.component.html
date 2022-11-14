@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="pic-carousel">
+        <button [class.mat-elevation-z2]="true" class="left-button" (click)="prevImageClick()"><mat-icon>keyboard_arrow_left</mat-icon></button>
+        <ng-image-slider class="slider" #nav
+            [images]="imageObject"
+            [showArrow]="false"
+            [infinite]="false"
+            [autoSlide]="1"
+            [imageSize]="{width: '25%', height: 200}"
+            slideImage="1"></ng-image-slider>
+        <button [class.mat-elevation-z2]="true" class="right-button" (click)="nextImageClick()"><mat-icon>keyboard_arrow_right</mat-icon></button>
+    </div>
+    <div class="business-info">
+        <div class="main-info">
+            <div class="business-header">
+                <div class="bus-pic"></div>
+                <div class="name-and-site">
+                    <h1>{{business.businessName}}</h1>
+                    <div class="site-and-number">
+                        <p><mat-icon>launch</mat-icon> {{business.website}}</p>
+                        <p><mat-icon>phone</mat-icon> {{business.number}}</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button mat-stroked-button class="favorite">Favorite</button>
+                        <button mat-flat-button class="share">Share</button>
+                    </div>
+                </div>
+            </div>
+            <div class="more-info">
+                <h1>Business Info</h1>
+                <div class="owner-and-loc">
+                    <div class="owner">
+                        <mat-icon>person</mat-icon>
+                        <div class="label-and-info">
+                            <p class="label">Owner</p>
+                            <p>{{business.ownerName}}</p>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <mat-icon>location_on</mat-icon>
+                        <div class="label-and-info">
+                            <p class="label">Address</p>
+                            <p>{{business.location}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="certs-and-about">
+                    <div class="certs">
+                        <mat-icon>verified_user</mat-icon>
+                        <div class="label-and-info">
+                            <p class="label">Certifications</p>
+                            <p>{{business.certifications}}</p>
+                        </div>
+                    </div>
+                    <div class="about">
+                        <mat-icon>description</mat-icon>
+                        <div class="label-and-info">
+                            <p class="label">About</p>
+                            <p>{{business.description}}</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div [class.mat-elevation-z4]="true" class="business-map" id="business-map"></div>
+    </div>
+</div>

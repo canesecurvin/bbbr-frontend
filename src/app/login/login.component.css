@@ -1,0 +1,120 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5vh;
+    width: 90%;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    width: 70%;
+    height: 100%;
+}
+
+.login-form h1 {
+    font-size: 5vh;
+    color: #09588E;
+}
+
+::ng-deep .login-form .mat-form-field {
+    width: 15vw;
+}
+
+::ng-deep .login-form .mat-form-field-wrapper .mat-form-field-outline div{
+    border-width: medium;
+    color: #09588E;
+}
+
+::ng-deep .login-form .mat-form-field-wrapper .mat-form-field-infix {
+    padding: 0;
+}
+
+::ng-deep .login-form .mat-form-field input{
+    width: 15vw;
+    height: 5vh;
+}
+
+.login-form p {
+    color: #09588E;
+}
+
+.login-form p a {
+    color: #FF3366;
+}
+
+.login-form button {
+    margin-top: 3vh;
+    width: 8vw;
+    background-color: #09588E;
+    color: white;
+}
+
+.promo-poster {
+    width: 30vw;
+    height: 85vh;
+    border-radius: 10px;
+    background-color: #09588E;
+}
+
+.poster {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+.poster-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10vh;
+    width: 100%;
+    height: 50%;
+}
+
+::ng-deep .poster-top .slider {
+    width: 100%;
+    height: 30%;
+}
+
+.poster-top button {
+    margin-top: 15vh;
+    height: 15%;
+    width: 3vw;
+    border: none;
+    background-color: black;
+    opacity: 60%;
+    z-index: 20;
+}
+
+.poster .left-button {
+    margin-left: -2vw;
+}
+
+.poster .right-button {
+    margin-right: -2vw;
+}
+
+.left-button .mat-icon, .right-button .mat-icon {
+    color: white;
+}
+
+.poster .promo-message {
+    margin-top: 5vh;
+    width: 100%;
+    height: 50%;
+    font-size: 3vh;
+    text-align: center;
+    color: white;
+}

@@ -1,0 +1,236 @@
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 35%;
+}
+
+::ng-deep .banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+::ng-deep .banner .carousel-inner {
+    height: 100%;
+}
+
+::ng-deep .banner .carousel-inner .carousel-item img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+::ng-deep .carousel-item .carousel-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 40%;
+    color: black;
+}
+
+::ng-deep .banner .carousel-control-prev, ::ng-deep .banner .carousel-control-next {
+    margin-top: 5%;
+    height: 35%;
+    width: 4vw;
+    border: none;
+    background-color: black;
+    opacity: 60%;
+    z-index: 20;
+}
+
+::ng-deep .banner .carousel-control-prev {
+    justify-self: flex-start;
+    align-self: center;
+    margin-left: -2vw;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+::ng-deep .banner .carousel-control-next {
+    justify-self: flex-end;
+    align-self: center;
+    margin-right: -2vw;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+::ng-deep .carousel-item .carousel-caption button {
+    margin: 0 2.5%;
+    width: 10vw;
+}
+
+::ng-deep .carousel-item .carousel-caption .banner-buttons .login {
+    border-width: .2vw;
+    border-color: #09588E;
+    color: #09588E;
+}
+
+::ng-deep .carousel-item .carousel-caption .signup {
+    background-color: #09588E;
+    color: white;
+}
+
+::ng-deep .carousel-item .carousel-caption .banner-buttons-light .login {
+    border-width: .2vw;
+    border-color: white;
+    color: white;
+}
+
+::ng-deep .carousel-item .carousel-caption .banner-buttons-light .signup {
+    background-color: white;
+    color: black;
+}
+
+.view-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 10vh;
+    width: 90%;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+    width: 25%;
+}
+
+.login-form h1, .cats-and-map h2 {
+    font-size: 5vh;
+    color: #09588E;
+}
+
+::ng-deep .login-form .mat-form-field {
+    width: 15vw;
+}
+
+::ng-deep .login-form .mat-form-field-wrapper .mat-form-field-outline div{
+    border-width: medium;
+    color: #09588E;
+}
+
+::ng-deep .login-form .mat-form-field-wrapper .mat-form-field-infix {
+    padding: 0;
+}
+
+::ng-deep .login-form .mat-form-field input{
+    width: 15vw;
+    height: 5vh;
+}
+
+.login-form p {
+    color: #09588E;
+}
+
+.login-form p a {
+    color: #FF3366;
+}
+
+.login-form button {
+    margin-top: 3vh;
+    width: 8vw;
+    background-color: #09588E;
+    color: white;
+}
+
+.cats-and-map {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.cat-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10vh;
+    width: 100%;
+    height: 15vh;
+}
+
+.cat-buttons .healthcare, .cuisine, .services{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+.cat-buttons .healthcare div, .cuisine div, .services div{
+    width: 100%;
+    height: 15vh;
+    border-radius: 10px;
+}
+
+.healthcare div {
+    background-image: url(../../assets/images/healthcare-images/1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cuisine div {
+    background-image: url(../../assets/images/food-images/1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.services div {
+    background-image: url(../../assets/images/services-images/1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cat-buttons .overlay {
+    height: 15vh;
+    margin-top: -15vh;
+    z-index: 20;
+    border-radius: 10px;
+    opacity: 50%;
+    background-color: black;
+}
+
+.cat-buttons div p {
+    justify-self: center;
+    align-self: center;
+    margin-top: -10vh;
+    font-size: 24px;
+    line-height: 24px;
+    color: white;
+    z-index: 60;
+}
+.cat-buttons div p .mat-icon {
+    justify-self: center;
+    width: 3vw;
+}
+
+.map-view {
+    margin-bottom: 5vh;
+    width: 100%;
+    height: 40vh;
+}
+
+.show {
+    display: visible
+}
+
+.hide {
+    display: none;
+}

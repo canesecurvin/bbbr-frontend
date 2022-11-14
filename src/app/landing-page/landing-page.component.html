@@ -1,0 +1,83 @@
+<div class="landing-container">
+    <div [class.mat-elevation-z4]="true" class="banner-content" id="banner">
+        <ngb-carousel *ngIf="images" class="banner">
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="images[0]" alt="Random first slide" />
+                </div>
+                <div class="carousel-caption">
+                    <h3 style="color:#09588E" *ngIf="!loggedIn">Create your profile and start saving your favorites today!</h3>
+                    <h3 style="color:#09588E" *ngIf="loggedIn">Hi, User! Start saving your favorites today!</h3>
+                    <div class="banner-buttons">
+                        <button *ngIf="!loggedIn" routerLink="/login" mat-stroked-button class="login">Login</button>
+                        <button *ngIf="!loggedIn" routerLink="/signup" mat-flat-button class="signup">Create Account</button>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="images[1]" alt="Random second slide" />
+                </div>
+                <div class="carousel-caption">
+                    <h3 class="text-light" *ngIf="loggedIn==false">Create your profile and start saving your favorites today!</h3>
+                    <h3 class="text-light" *ngIf="loggedIn==true">Hi, User! Start saving your favorites today!</h3>
+                    <div class="banner-buttons-light">
+                        <button *ngIf="!loggedIn"routerLink="/login" mat-stroked-button class="login">Login</button>
+                        <button *ngIf="!loggedIn"routerLink="/signup" mat-flat-button class="signup">Create Account</button>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="images[2]" alt="Random third slide" />
+                </div>
+                <div class="carousel-caption">
+                    <h3 class="text-light" *ngIf="!loggedIn">Create your profile and start saving your favorites today!</h3>
+                    <h3 class="text-light" *ngIf="loggedIn">Hi, User! Start saving your favorites today!</h3>
+                    <div class="banner-buttons-light">
+                        <button *ngIf="!loggedIn"routerLink="/login" mat-stroked-button class="login">Login</button>
+                        <button *ngIf="!loggedIn"routerLink="/signup" mat-flat-button class="signup">Create Account</button>
+                    </div>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+    <div class="view-container" id="view-container">
+        <form class="login-form" id="login-form" [formGroup]="loginForm">
+            <h1>Login</h1>
+            <mat-form-field appearance="outline">
+                <input matInput type="text" placeholder="Email" formControlName="email">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <input matInput type="password" placeholder="Password" formControlName="password">
+            </mat-form-field>
+            <p>Don't have an account? <a>Sign Up here!</a></p>
+            <button mat-raised-button (click)="userLogin()">Submit</button>
+        </form>
+        <div class="cats-and-map">
+            <h2>Categories</h2>
+            <div class="cat-buttons">
+                <div class="healthcare">
+                    <div class="healthcare">
+                    </div>
+                    <button class="overlay" (click)="navigateToCategory(1)"></button>
+                    <p><mat-icon>healing</mat-icon>Healthcare</p>
+                </div>
+                <div class="cuisine">
+                    <div class="cusine">
+                    </div>
+                    <button class="overlay" (click)="navigateToCategory(2)"></button>
+                    <p><mat-icon>fastfood</mat-icon>Cuisine</p>
+                </div>
+                <div class="services">
+                    <div class="services">
+                    </div>
+                    <button class="overlay" (click)="navigateToCategory(3)"></button>
+                    <p><mat-icon>room_service2</mat-icon>Services</p>
+                </div>
+            </div>
+            <h2>Recently Viewed</h2>
+            <div [class.mat-elevation-z4]="true"class="map-view" id="home-map"></div>
+        </div>
+    </div>
+</div>

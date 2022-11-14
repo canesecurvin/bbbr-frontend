@@ -1,0 +1,51 @@
+<div class="cat-container">
+    <div class="cat-navigation">
+        <button class="healthcare">
+            <mat-icon>healing</mat-icon>
+            <span>Healthcare</span>
+        </button>
+        <button class="cuisine">
+            <mat-icon>fastfood</mat-icon>
+            <span>Cuisine</span>
+        </button>
+        <button class="services">
+            <mat-icon>room_service2</mat-icon>
+            <span>Services</span>
+        </button>
+    </div>
+    <div class="category-body">
+        <p class="listings-num">{{this.bmap.length}} Listings</p>
+        <div class="listings-container">
+            <div class="listings">
+                <mat-card [class.mat-elevation-z2]="true" *ngFor="let bus of bmap" class="business-card">
+                    <mat-card-content class="card-body" id="card-body-{{bus.id}}"> </mat-card-content>
+                    <p class="title">{{bus.businessName}}</p>
+                    <mat-card-footer class="card-footer">
+                        <div class="card-details">
+                            <div><mat-icon>favorite</mat-icon> <span>20</span></div>
+                            <div><mat-icon>location_on</mat-icon> <span>Location</span></div>
+                        </div>
+                        <button mat-mini-fab [matMenuTriggerFor]="catMenu">
+                            <mat-icon>keyboard_arrow_right</mat-icon>
+                            <mat-menu #catMenu="matMenu" yPosition="above">
+                                <button mat-menu-item (click)="navigateToBusinessPage(bus)">
+                                    <mat-icon>healing</mat-icon>
+                                    <span>Business Details</span>
+                                </button>
+                                <button mat-menu-item  *ngIf="loggedIn" (click)="addToFavorites(bus.id)">
+                                    <mat-icon>fastfood</mat-icon>
+                                    <span>Save</span>
+                                </button>
+                                <button mat-menu-item  *ngIf="loggedIn" (click)="this.router.navigate(['categories'])">
+                                    <mat-icon>room_service2</mat-icon>
+                                    <span>Unsave</span>
+                                </button>
+                            </mat-menu>
+                        </button>
+                    </mat-card-footer>
+                </mat-card>
+            </div>
+            <div [class.mat-elevation-z4]="true" class="map" id="map" class="cat-map"></div>
+        </div>
+    </div>
+</div>

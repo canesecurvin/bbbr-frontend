@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="body">
+        <form class="signup-form" [formGroup]="signupForm">
+            <h1>Create Account</h1>
+            <mat-form-field appearance="outline">
+                <input matInput type="text" placeholder="First Name" formControlName="firstName">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <input matInput type="text" placeholder="Last Name" formControlName="lastName">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <input matInput type="text" placeholder="Email" formControlName="email">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <input matInput type="password" placeholder="Password" formControlName="password">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <input matInput type="password" placeholder="Confirm Password" formControlName="confirmPassword">
+            </mat-form-field>
+            <p>Already have an account? <a>Log in here!</a></p>
+            <button mat-raised-button (click)="newUser()">Submit</button>
+        </form>
+        <div [class.mat-elevation-z2]="true" class="promo-poster">
+            <div class="poster">
+                <div class="poster-top">
+                    <button class="left-button" (click)="prevImageClick()"><mat-icon>keyboard_arrow_left</mat-icon></button>
+                    <ng-image-slider class="slider" #nav
+                        [images]="imageObject"
+                        [showArrow]="false"
+                        [infinite]="true"
+                        [autoSlide]="1"
+                        [imageSize]="{width: '50%', height: '25%'}"
+                        slideImage="1"></ng-image-slider>
+                    <button class="right-button" (click)="nextImageClick()"><mat-icon>keyboard_arrow_right</mat-icon></button>
+                </div>
+                <p class="promo-message">
+                    Login to start saving your favorite Black Businesses Today!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

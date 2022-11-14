@@ -1,0 +1,47 @@
+<div class="nav-container">
+    <mat-toolbar class="navigation">
+        <div class="logo-container"><div class="logo"></div></div>
+        <div class="nav-links">
+            <button [matMenuTriggerFor]="menu" class="profile">
+                <span>PROFILE</span>
+                <mat-menu #menu="matMenu" yPosition="above">
+                    <button mat-menu-item *ngIf="loggedIn" (click)="clickMenuItem('profile')">
+                        <mat-icon>person</mat-icon>
+                        <span>My Profile</span>
+                    </button>
+                    <button mat-menu-item *ngIf="!loggedIn" (click)="clickMenuItem('login')">
+                        <mat-icon>person</mat-icon>
+                        <span>Login</span>
+                    </button>
+                    <button mat-menu-item *ngIf="loggedIn" (click)="clickMenuItem('settings')">
+                        <mat-icon>settings</mat-icon>
+                        <span>Settings</span>
+                    </button>
+                    <button mat-menu-item *ngIf="loggedIn" (click)="clickMenuItem('logout')">
+                        <mat-icon>person_outline</mat-icon>
+                        <span>Logout</span>
+                    </button>
+                </mat-menu>
+            </button>
+            <button [matMenuTriggerFor]="catMenu" class="profile">
+                <span>CATEGORIES</span>
+                <mat-menu #catMenu="matMenu" yPosition="above">
+                    <button mat-menu-item (click)="this.router.navigate(['categories'])">
+                        <mat-icon>healing</mat-icon>
+                        <span>Healthcare</span>
+                    </button>
+                    <button mat-menu-item (click)="this.router.navigate(['categories'])">
+                        <mat-icon>fastfood</mat-icon>
+                        <span>Cuisine</span>
+                    </button>
+                    <button mat-menu-item (click)="this.router.navigate(['categories'])">
+                        <mat-icon>room_service2</mat-icon>
+                        <span>Services</span>
+                    </button>
+                </mat-menu>
+            </button>
+            <a href="">CONTACT</a>
+        </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+</div>

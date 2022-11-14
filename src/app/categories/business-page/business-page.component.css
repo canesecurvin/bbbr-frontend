@@ -1,0 +1,190 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+}
+
+.pic-carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+    width: 100%;
+    height: 30vh;
+}
+
+.pic-carousel .slider {
+    width: 100%;
+    height: 100%;
+    overflow-x: visible;
+}
+
+::ng-deep .slider .ng-image-slider .ng-image-slider-container .main .main-inner .img-div img {
+    border-radius: 0;
+}
+
+.pic-carousel .left-button, .right-button {
+    width: 5vw;
+    height: 10%;
+    opacity: 60%;
+    border: none;
+    background-color: black;
+}
+
+.left-button .mat-icon, .right-button .mat-icon{
+    color: white;
+}
+
+.pic-carousel .left-button {
+    position: absolute;
+    justify-self: flex-start;
+    left: 8%;
+    z-index: 90;
+}
+
+.pic-carousel .right-button {
+    position: absolute;
+    justify-self: flex-end;
+    right: 8%;
+    z-index: 90;
+}
+
+.business-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.main-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 5%;
+    width: 70%;
+}
+
+.business-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 10vh;
+    width: 100%;
+}
+
+.business-header .bus-pic {
+    margin-right: 3vw;
+    width: 13vw;
+    height: 100%;
+    background-image: url(../../../assets/images/bus-logo-images/11.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px solid #09588E;
+}
+
+.business-header .name-and-site {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.name-and-site h1 {
+    font-size: 2.5em;
+}
+
+.name-and-site .site-and-number {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.site-and-number p{
+    margin-right: 2vw;
+    width: auto;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1em;
+}
+
+.site-and-number p .mat-icon{
+    margin-right: .2vw;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.name-and-site .action-buttons {
+    justify-self: flex-end;
+    width: 100%;
+}
+
+.name-and-site .action-buttons button {
+    width: 8vw;
+    margin-right: 3vw;
+}
+
+.action-buttons .favorite {
+    border-width: .2vw;
+    border-color: #FF3366;
+    color: #FF3366;
+}
+
+.action-buttons .share {
+    background-color: #FF3366;
+    color: white;
+}
+
+.main-info .more-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.more-info h1 {
+    margin-bottom: 6vh;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.more-info .owner-and-loc, .certs-and-about {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height: 20vh;
+}
+
+.owner-and-loc .owner, .certs-and-about .certs {
+    margin-right: 10vw;
+    width: 25%;
+}
+
+.owner-and-loc .owner, .owner-and-loc .location, .certs-and-about .certs, .certs-and-about .about {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.owner-and-loc .mat-icon, .certs-and-about .mat-icon {
+    font-size: 3vh;
+    margin-right: 1vw;
+}
+
+.owner .label, .location .label, .certs .label, .about .label {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.business-map {
+    justify-self: flex-end;
+    width: 25%;
+    margin-bottom: 3vh;
+}
